@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body{
+            height:100%;
+            background-color: red;
+        }
+    </style>
+
+</head>
+<body>
+
+<script>
+
+
+
+ // var color = document.body.style.backgroundColor;
+   //console.log(color);
+
+ var element = document.body;
+
+ var color = window.getComputedStyle(element);
+ var color1 = color.getPropertyValue('background-color');
+
+    console.log(color1);
+
+    document.body.addEventListener("wheel",function(e){
+
+
+       if(e.wheelDelta > 0){
+
+           if(color1 >= 255) {
+
+               document.body.style.backgroundColor = color1 -10;
+
+           }
+
+           if(color1 <=50){
+               document.body.style.backgroundColor = color1 -10;
+           }
+       }
+
+    })
+
+</script>
+
+</body>
+</html>
