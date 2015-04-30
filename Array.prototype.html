@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<script>
+    var arr = [{name:"mishra"}, {name:"lakshmi"}, {name:"rashmika"}, {name:"chris"}];
+
+
+    var arr = [{name: 'mishra'}, {name: 'lakshmi'}, {name: 'rashmika'}, {name: 'Chris'}];
+    // write a filter function to generate an array which has names containing the letter 'a'
+    var obj = arr.filter(function (elem) {
+        return /a/.test(elem.name);
+    });
+//    console.log(obj);
+
+    function checkElem(array, val){
+
+        var newArr = [];
+
+        array.filter(function(e){
+          //  console.log(e.name.indexOf('a'));
+
+
+            if (e.name.indexOf(val) != -1){
+
+           newArr.push(e);
+           }
+
+
+        })
+              return newArr;
+    }
+
+    console.log(checkElem(arr,'a'));
+
+</script>
+
+</body>
+</html>
